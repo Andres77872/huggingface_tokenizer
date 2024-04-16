@@ -3,7 +3,7 @@ import os
 from transformers import AutoTokenizer
 
 
-def tokenize(
+async def tokenize(
         model: str,
         input_text: str,
         add_special_tokens: bool = False,

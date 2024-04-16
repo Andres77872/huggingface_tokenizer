@@ -25,7 +25,7 @@ async def root(
         input_text: str = Form(),
         add_special_tokens: bool = Form(False),
 ):
-    if tk := tokenize(
+    if tk := await tokenize(
             model=model,
             input_text=input_text,
             add_special_tokens=add_special_tokens
@@ -44,7 +44,7 @@ async def root(
         input_text: str = Query(),
         add_special_tokens: bool = Query(False),
 ):
-    if tk := tokenize(
+    if tk := await tokenize(
             model=model,
             input_text=input_text,
             add_special_tokens=add_special_tokens
